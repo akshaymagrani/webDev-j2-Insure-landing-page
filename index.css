@@ -1,0 +1,306 @@
+
+/* 
+font-family: 'Karla', sans-serif;
+
+font-family: 'DM Serif Display', serif;
+*/
+
+/*
+<i class="fas fa-user-circle"></i>
+<i class="fas fa-dollar-sign"></i>
+<i class="fas fa-bolt"></i>
+<i class="fas fa-bars"></i>*/
+
+/*Colors
+
+Primary
+Dark Violet: hsl(256, 26%, 20%)
+Grayish Blue: hsl(216, 30%, 68%)
+
+Neutral
+Very Dark Violet: hsl(270, 9%, 17%)
+Dark Grayish Violet: hsl(273, 4%, 51%)
+Very Light Gray: hsl(0, 0%, 98%)*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+.header-logo{
+    float:left;
+}
+.logo-nav{
+    background-color: white;
+    padding:1.5em 1em;
+}
+.sec1-header-desk-mobile{
+    background-color:hsl(256, 26%, 20%);
+    color:white;
+}
+
+.sec2-subsec{
+    background-color:hsl(256, 26%, 20%);
+    color:white;
+}
+.section3{
+    background-color: hsl(0, 0%, 98%);
+    text-transform:uppercase;
+}
+.button1, .button2{
+    background-color: hsl(256, 26%, 20%);
+    color:white;
+    border:1px solid white;
+    text-transform: uppercase;
+    padding:0.5em 1em;
+    margin:2em;
+}
+.insureFooterLogo{
+    padding:1em;
+}
+.facebook-logo, .twitter-logo, .pinterest-logo, .instagram-logo {
+    padding:0.3em;
+    margin:1rem 0;
+}
+.h1-heading{
+    font-family: 'DM Serif Display', serif;
+}
+
+@media only screen and (max-width:600px) {
+    *{
+        font-size: 16px;
+    }
+    .main{
+        text-align:center;
+    }
+    .mobile-intro-image{
+        width:100vw;
+        height:400px;
+    }
+    span{
+        float:right;
+        padding: 0.3em 0.5em;
+        border: 1px solid black;
+    }
+    .background-image1{
+        width:100%;
+        height:300px;
+        padding:0;
+        background-color:hsl(270, 9%, 17%);
+        color:white;
+        text-transform: uppercase;
+    }
+    div.background-image1 > ul {
+        text-decoration: none;
+    }
+    li{
+        padding: 0.5em;
+    }
+    li > a {
+        text-decoration: none;
+        color: white;
+        padding: 1em;
+    } 
+    li > a:hover{
+        border: 1px solid white;
+    }
+    .h1-heading{
+        font-size: 2em;
+    }
+    .section2{
+        padding:1em;
+        margin:5em 0;
+    }
+    .sec2-content{
+        margin:3em 0 5em;
+    }
+    .sec2-content > *{
+        margin: 1em 0;
+    }
+    .sec2-subsec{
+        margin:2em 0;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .mobile-bg{
+        float:right;
+    }
+    .mobile-bg-intro-right{
+        float:right;
+        position: relative;
+        bottom: 150px;
+    }
+    .mobile-bg-intro-left{
+        float:left;
+        
+    }
+    .sec3-content{
+        position:relative;
+        bottom:100px;
+    }
+    .sec3-footer-map > p{
+        padding: 1em 0;
+    } 
+    .desktop-intro-image, .desktop-bg-intro-left, .desktop-bg-intro-right, .desktop-bg, .footer-bgdesktop-image {
+        display: none;
+    }
+    .footer-p{
+        padding:2.5em 0.5em;
+        font-weight: bold;
+        color:hsl(273, 4%, 51%);
+    }
+    .sec3-work, .sec3-help,.sec3-contact,.sec3-others {
+        list-style-type: none;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    *{
+        font-size: 16px;
+    }
+    body{
+        max-width:1445px;
+        margin:0.1px auto;
+    }
+    .main{
+        text-align:left;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    span{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobile-nav{
+        display: none;
+    }
+    .navigation{
+        float:right;
+    }
+    .navigation > ul{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+    .sec1-sec2-hr{
+        width:10vw;
+    }
+    li{
+        margin:0.5em;
+    }
+    li > a {
+        text-decoration: none;
+        padding: 1em 1em;
+        color:hsl(216, 30%, 68%);
+        display : block;
+        
+    } 
+    li > a:active{
+        border: 1px solid black;
+        color:black;
+    }
+    .h1-heading{
+        font-size: 3em;
+        margin:1em 0
+    }
+    .desktop-bg-intro-left{
+        position:relative;
+        top:15em;
+    }
+    .desktop-bg-intro-right{
+        transform: scale(0.8);
+        position: relative;
+        bottom: 4em;
+        left: 2.5em;
+    }
+    .desktop-intro-image{
+        position: relative;
+        left: 16em;
+        top: 7em;
+    }
+    .sec1-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sec1-header-desk-mobile{
+        display: flex;
+    }
+    .section2{
+        padding:1em;
+        margin:5em 0;
+    }
+    .logo{
+        margin:1em 0;
+    }
+    .logo ~ h2{
+        margin:0.4em 0;
+    }
+    .sec2-diff{
+        display: flex;
+        justify-content: space-around;
+        padding:1.5em 0 2em;
+    }
+    .sec2-content{
+        margin:3em 0 5em;
+    }
+    .sec2-content > *{
+        margin: 1em 0;
+    }
+    .sec2-subsec{
+        margin:2em 0;
+    }
+    .button2{
+        position: relative; 
+        right:0;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .sec3-content{
+        position:relative;
+        bottom:170px;
+        margin:1.5em 5em;
+    }
+    .desktop-bg{
+        position: relative;
+        right:0
+    }
+    .sec3-map{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .sec3-footer-map > *p{
+        padding: 1em 0;
+    }  
+    p > ul{
+        list-style-type: none;
+        font-weight:bold;
+    }
+    .mobile-intro-image, .mobile-bg-intro-left, .mobile-bg-intro-right,.mobile-bg, .footer-bgmobile-image{
+        display: none;
+    }
+    .sec3-work, .sec3-help,.sec3-contact,.sec3-others {
+        list-style-type: none;
+        font-weight: bold;
+    }
+    .footer-p{
+        padding:2.5em 0.5em;
+        font-weight: bold;
+        color:hsl(273, 4%, 51%);
+    }
+    .sec3-footer-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
