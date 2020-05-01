@@ -34,11 +34,18 @@ Very Light Gray: hsl(0, 0%, 98%)*/
     background-color: white;
     padding:1.5em 1em;
 }
+#icon-hamburger{
+    display: block;
+    float:right;
+}
+#icon-cross{
+    display: none;
+    float:right;
+}
 .sec1-header-desk-mobile{
     background-color:hsl(256, 26%, 20%);
     color:white;
 }
-
 .sec2-subsec{
     background-color:hsl(256, 26%, 20%);
     color:white;
@@ -56,7 +63,8 @@ Very Light Gray: hsl(0, 0%, 98%)*/
     margin:2em;
 }
 .insureFooterLogo{
-    padding:1em;
+    padding: 0.3em;
+    margin: 1rem 0;
 }
 .facebook-logo, .twitter-logo, .pinterest-logo, .instagram-logo {
     padding:0.3em;
@@ -64,6 +72,9 @@ Very Light Gray: hsl(0, 0%, 98%)*/
 }
 .h1-heading{
     font-family: 'DM Serif Display', serif;
+}
+#mobile-div-nav{
+    display: none;
 }
 
 @media only screen and (max-width:600px) {
@@ -99,7 +110,7 @@ Very Light Gray: hsl(0, 0%, 98%)*/
     li > a {
         text-decoration: none;
         color: white;
-        padding: 1em;
+        padding: 0.5em;
     } 
     li > a:hover{
         border: 1px solid white;
@@ -154,6 +165,17 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         list-style-type: none;
         font-weight: bold;
     }
+    .sec1-sec2-hr{
+        display:none;
+    }
+}
+@media only screen and (min-width:450px) {
+    #icon-hamburger{
+        display: none;
+    }
+    #icon-cross{
+        display: none;
+    }
 }
 
 @media only screen and (min-width:600px) {
@@ -161,14 +183,15 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         font-size: 16px;
     }
     body{
-        max-width:1445px;
         margin:0.1px auto;
     }
     .main{
         text-align:left;
         display: flex;
         flex-direction: column;
-       
+    }
+    #mobile-div-nav {
+        display: block;
     }
     span{
         display: none;
@@ -192,7 +215,7 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         width:10vw;
     }
     li{
-        margin:0.5em;
+        margin:1em 0.5em;
     }
     li > a {
         text-decoration: none;
@@ -206,8 +229,10 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         color:black;
     }
     .h1-heading{
-        font-size: 3em;
-        margin:1em 0
+        font-size: 2.5em;
+        margin: 1em 0;
+        align-self: center;
+        padding: 1em;
     }
     .desktop-bg-intro-left{
         position:relative;
@@ -215,9 +240,9 @@ Very Light Gray: hsl(0, 0%, 98%)*/
     }
     .desktop-bg-intro-right{
         transform: scale(0.8);
-        position: relative;
-        bottom: 4em;
-        left: 2.5em;
+        position: absolute;
+        top: 50px;
+        right: -50px;
     }
     .desktop-intro-image{
         position: relative;
@@ -228,6 +253,7 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 420px;
     }
     .sec1-header-desk-mobile{
         display: flex;
@@ -251,14 +277,21 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         margin:3em 0 5em;
     }
     .sec2-content > *{
-        margin: 1em 0;
+        margin: 1em auto;
+        max-width: 1300px;
     }
     .sec2-subsec{
-        margin:2em 0;
+        margin: 2em auto;
+        display: flex;
+        max-width: 1350px;
     }
     .button2{
-        position: relative; 
-        right:0;
+        position: relative;
+        left: 20em;
+        height: 3em;
+        align-self: center;
+        width: 15em;
+        min-width: 10em;
     }
     h2{
         font-size: 1.5em;
@@ -300,6 +333,19 @@ Very Light Gray: hsl(0, 0%, 98%)*/
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .button1{
+        max-width: 375px;
+        margin: 2em 2em 2em 0;
+    }
+    .sec1-heading{
+        padding: 1em 0;
+    }
+    .s2-d1{
+        padding: 0.5em;
+    }
+    .sec1-sec2-hr{
+        text-align: left;
     }
 }
 .attribution { font-size: 11px; text-align: center; }
