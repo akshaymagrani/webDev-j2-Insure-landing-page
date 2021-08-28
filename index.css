@@ -1,6 +1,5 @@
 /* 
 font-family: 'Karla', sans-serif;
-
 font-family: 'DM Serif Display', serif;
 */
 
@@ -30,6 +29,17 @@ Very Light Gray: hsl(0, 0%, 98%)*/
 p {
   line-height: 1.5em;
 }
+.hoverState:hover {
+  background-color: white;
+  color: black;
+}
+.f-ul-hoverState:hover {
+  text-decoration: underline;
+}
+li > a[href="#"]:hover {
+  text-decoration: none;
+}
+
 /*____Navigation____*/
 .header-logo {
   float: left;
@@ -74,7 +84,16 @@ p {
   bottom: -20%;
   right: 0;
 }
-@media only screen and (min-width: 600px) {
+nav li:last-child:hover {
+  color: white;
+}
+svg path {
+  fill: #837d88;
+}
+svg path:hover {
+  fill: black;
+}
+@media only screen and (min-width: 660px) {
   .bg-desktop-left {
     display: block;
     position: absolute;
@@ -101,6 +120,20 @@ p {
   .bg-right-mobile-intro {
     display: none;
   }
+  li:hover {
+    text-decoration: none;
+    color: black;
+  }
+  li:active {
+    font-weight: bolder;
+  }
+  .navigation li:last-child:hover {
+    background-color: black;
+    color: white;
+  }
+  nav li:last-child {
+    border: 2px solid black;
+  }
 }
 .sec1-text {
   background-image: url("images/bg-pattern-intro-left-mobile.svg");
@@ -109,7 +142,7 @@ p {
   background-repeat: no-repeat;
   padding: 1em;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 660px) {
   .sec1-text {
     background-image: none;
   }
@@ -142,9 +175,7 @@ p {
 .button1 {
   margin: 2em;
 }
-.button2 {
-  margin: 2em;
-}
+
 @media only screen and (min-width: 600px) {
   .sec2-hr {
     width: 8em;
@@ -199,6 +230,12 @@ p {
   border: 1px solid white;
   text-transform: uppercase;
   padding: 0.5em 1em;
+  cursor: pointer;
+}
+.button2 {
+  margin: 2em;
+  z-index: 1;
+  background-color: transparent;
 }
 @media only screen and (min-width: 475px) {
   .button2 {
@@ -227,6 +264,7 @@ p {
 .sec3-content {
   max-width: 1300px;
   margin: auto;
+  padding: 1.5em;
 }
 .insureFooterLogo {
   padding: 0.3em;
@@ -238,6 +276,7 @@ p {
 .instagram-logo {
   padding: 0.3em;
   margin: 3em 0.3em;
+  cursor: pointer;
 }
 .sec3-footer-map > p {
   padding: 2.5em 0;
@@ -250,7 +289,7 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
   * {
     font-size: 16px;
   }
@@ -260,6 +299,10 @@ p {
   .mobile-intro-image {
     width: 100vw;
     height: 400px;
+  }
+  .navigation li {
+    margin: 1em;
+    border: 1px solid transparent;
   }
   span {
     float: right;
@@ -284,13 +327,22 @@ p {
   li {
     padding: 1em;
   }
+  .sec3-work li,
+  .sec3-others li,
+  .sec3-map li,
+  .sec3-help li {
+    padding: 0.5em;
+  }
   li > a {
     text-decoration: none;
     color: white;
     padding: 0.5em;
   }
-  li > a:hover {
+  .navigation li:hover {
     border: 1px solid white;
+  }
+  .navigation li:active {
+    font-weight: bolder;
   }
   .h1-heading {
     font-size: 2em;
@@ -339,16 +391,8 @@ p {
     margin: auto;
   }
 }
-@media only screen and (min-width: 600px) {
-  #icon-hamburger {
-    display: none;
-  }
-  #icon-cross {
-    display: none;
-  }
-}
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 660px) {
   * {
     font-size: 16px;
   }
@@ -369,10 +413,16 @@ p {
   .nav {
     display: flex;
     justify-content: space-between;
-    min-width: 1300px;
+    min-width: 100%;
     margin: auto;
   }
   .mobile-nav {
+    display: none;
+  }
+  #icon-hamburger {
+    display: none;
+  }
+  #icon-cross {
     display: none;
   }
   .navigation {
@@ -397,10 +447,15 @@ p {
     padding: 1em 1em;
     color: hsl(216, 30%, 68%);
     display: block;
+    border: 1px solid transparent;
   }
   li > a:active {
     border: 1px solid black;
     color: black;
+  }
+  li > .last:active {
+    border: 1px solid black;
+    color: white;
   }
   .h1-heading {
     font-size: 2.5em;
@@ -426,7 +481,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 420px;
+    max-width: 35%;
   }
   .sec1-header-desk-mobile {
     display: flex;
@@ -522,6 +577,13 @@ p {
     padding: 1em 0 0;
   }
   .s2-d1 {
-    padding: 0.5em;
+    padding: 1em;
+    border: 1px solid transparent;
+  }
+  .s2-d1:hover {
+    scale: 0.99;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px lightgray, 0 10px 20px lightblue;
   }
 }
